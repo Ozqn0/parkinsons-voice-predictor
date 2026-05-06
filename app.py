@@ -273,7 +273,7 @@ def load_model_and_scaler():
     scaler = StandardScaler()
     scaler.fit(X_imp)
 
-    model = PyTorchANN(input_dim=20, hidden_layers=[16])
+    model = PyTorchANN(input_dim=20, hidden_layers=[8])
     state = torch.load(MODEL_PATH, map_location='cpu')
     model.load_state_dict(state)
     model.eval()
